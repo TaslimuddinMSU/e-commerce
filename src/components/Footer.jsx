@@ -33,7 +33,7 @@ export default function Footer() {
                     {/* Links */}
                     <div className="flex flex-col">
                         <h3 className="font-semibold">Organic</h3>
-                        <ul className="mt-3 space-y-2 text-gray-600">
+                        <ul className="mt-3 space-y-2 text-gray-600 leading-7">
                             <Link href="#"><li>About us</li></Link>
                             <Link href="#"><li>Conditions</li></Link>
                             <Link href="#"><li>Our Journals</li></Link>
@@ -43,7 +43,7 @@ export default function Footer() {
 
                     <div className="flex flex-col">
                         <h3 className="font-semibold">Customer Service</h3>
-                        <ul className="mt-3 space-y-2 text-gray-600">
+                        <ul className="mt-3 space-y-2 text-gray-600 leading-7">
                             <Link href="#"><li>FAQ</li></Link>
                             <Link href="#"><li>Contact</li></Link>
                             <Link href="#"><li>Privacy Policy</li></Link>
@@ -56,7 +56,7 @@ export default function Footer() {
                     {/* Subscription */}
                     <div className="flex flex-col">
                         <h3 className="font-semibold">Subscribe Us</h3>
-                        <p className="mt-3 text-gray-600">Subscribe now to receive the latest updates and special offers from us.</p>
+                        <p className="mt-3 text-gray-600 leading-7">Subscribe now to receive the latest updates and special offers from us.</p>
                         <div className="mt-3 flex">
                             <input
                                 type="email"
