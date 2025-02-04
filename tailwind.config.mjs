@@ -13,6 +13,7 @@ export default {
       },
       backgroundImage: {
         bannerImg: "url('/org-food.webp')",
+        newsLatterBanner: "url('/banner-newsletter.jpg')"
       },
     },
   },

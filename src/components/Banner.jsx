@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="relative z-10 text-white flex flex-col p-8 gap-3">
                 <h1 className="px-2 sm:px-3">
                     <span className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl text-green-500 font-bold">Organic </span>
-                    <span className="text-white"><span className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl'>Foods at <br /> your </span>
+                    <span className="text-[#212529]"><span className='text-4xl sm:text-4xl md:text-5xl lg:text-6xl'>Foods at <br /> your </span>
                         <span className='text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold'>Doorsteps</span>
                     </span>
                 </h1>
