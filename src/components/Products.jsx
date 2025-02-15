@@ -2,15 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import { useRef, useState, useEffect } from 'react';
-import {FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart } from 'react-icons/fa';
 import AddToCart from "@/components/AddToCart"
-import { products } from "@/utils/Data";
-const Products = () => {
+import Link from "next/link";
+const Products = ({ products }) => {
 
-    const scrollRef = useRef(null);
-    const [isAtStart, setIsAtStart] = useState(true);
-    const [isAtEnd, setIsAtEnd] = useState(false);
-    const [quantities, setQuantities] = useState({});
     const [allItemsToCart, setAllItemsToCart] = useState([]);
 
     const handleAddItems = (id) => {
@@ -20,25 +16,26 @@ const Products = () => {
         }
     }
     console.log("handleAddItems", allItemsToCart)
-    const handleRemoveItems  = (id) => {
+    const handleRemoveItems = (id) => {
         console.log("handleRemoveItems", id)
     }
 
     return (
         <div className="w-full relative flex items-center justify-center">
             <div className="w-full flex gap-8 overflow-x-auto p-4 hide_scrollbar scroll-snap">
-                {products.map((product, index) => (
+                {products.map((product) => (
                     <div
                         key={product.id}
-                        className="relative group border rounded-lg shadow-lg w-64 flex-shrink-0 scroll-snap-center cursor-pointer"
+                        className="relative group border rounded-lg shadow-lg w-64 flex-shrink-0 scroll-snap-center cursor-pointer transition-transform duration-300 group-hover:scale-110"
                     >
                         <div className="flex items-center justify-center w-full h-auto p-4">
                             <Image
                                 src={product.image}
                                 alt={product.name}
-                                className="h-48 w-full object-cover"
+                                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                                 width={100}
                                 height={100}
+
                             />
                         </div>
                         <div className="p-4">
@@ -68,12 +65,14 @@ const Products = () => {
                                     <span className="text-sm text-slate-950">{allItemsToCart.length}</span>
                                     <button onClick={ () => handleAddItems(product.id)} className="px-2 py-1 text-gray-600 border border-gray-300 rounded-md hover:bg-gray-200">+</button>
                                 </div> */}
-                                <button className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-md text-sm">
-                                    <span className="text-center"><FaShoppingCart /></span> <span className="text-sm text-white">Add to Cart</span>
+                                <button onClick={() => handleAddItems(product.id)}
+                                    className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-md text-sm">
+                                    {/* <span className="text-center"><FaShoppingCart/></span>  */}
+                                    <span className="text-sm text-white">Add to Cart</span>
                                 </button>
-                                <button className="w-full flex items-center justify-center gap-2 bg-yellow-500 text-white px-4 py-2 rounded-md text-sm">
+                                <Link href={`/${product.id}`} className="w-full flex items-center justify-center bg-yellow-500 hover:bg-black text-white p-2 rounded-md text-sm">
                                     <span className="text-sm text-white">View Detail</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

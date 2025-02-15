@@ -1,29 +1,28 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, Search, User, Bookmark, ShoppingCart } from 'lucide-react';
+import { Menu, X, Search,  Bookmark, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import NavLogo from "@/assets/icons/food-icon.png";
 import Link from 'next/link';
+import {FaShoppingCart, FaUser } from 'react-icons/fa';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
         <nav className="bg-white shadow-md px-6 sm:px-6 md:px-8 lg:px-10 py-3 flex items-center justify-between gap-4">
-            {/* Logo and Menu Icon */}
             <div className="flex items-center gap-4">
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden">
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
-                <span className="text-2xl font-bold flex items-center gap-2">
+                <Link href= "/" className="text-2xl font-bold flex items-center gap-2">
                     <Image src={NavLogo} alt="Logo" width={50} height={50} />
                     <span className="text-green-500">Organic Foods</span>
-                </span>
+                </Link>
             </div>
             <div className='hidden gap-4 sm:flex'>
-                <Link href={"#"} className='text-black-500'>HOME</Link>
+                <Link href={"/"} className='text-black-500'>HOME</Link>
                 <div className="text-black cursor-pointer">PAGES</div>
             </div>
-            {/* Search Bar */}
             <div className="hidden md:flex lg:flex flex-grow max-w-xl border rounded-lg overflow-hidden">
                 <select className="bg-gray-100 p-3 border-r outline-none hidden lg:flex">
                     <option>All Categories</option>
@@ -40,9 +39,11 @@ const Navbar = () => {
 
             {/* Icons */}
             <div className="flex items-center gap-3 sm:gap-4">
-                <Link href="" className='hover:rounded-[8px] hover:px-3 py-2 hover:border-gray-500 flex gap-2 justify-center items-center border border-transparent'><User size={25} />Taslim</Link>
+                <Link href="" className='hover:rounded-[8px] hover:px-3 py-2 hover:border-gray-500 flex gap-2 justify-center items-center border border-transparent'>
+                <FaUser size={25} />Taslim
+                </Link>
                 <Link href=""><Bookmark size={25} /></Link>
-                <Link href=""><ShoppingCart size={25} /></Link>
+                <Link href=""><FaShoppingCart size={25} className='text-yellow'/></Link>
             </div>
 
             {/* Mobile Sidebar */}

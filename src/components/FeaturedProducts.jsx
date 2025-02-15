@@ -4,6 +4,7 @@ import Title from './Title'
 import { useRef, useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Products from './Products';
+import { products } from "@/utils/Data";
 
 const FeaturedProducts = () => {
     const scrollRef = useRef(null);
@@ -42,7 +43,7 @@ const FeaturedProducts = () => {
                 </div>
             </div>
             <div className="w-full flex items-center justify-center">
-            <Products />   
+            <Products products = {products}/>   
             </div>
         </div>
     )

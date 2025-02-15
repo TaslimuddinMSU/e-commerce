@@ -101,7 +101,7 @@ const Category = () => {
                                     height={50}
                                 />
                             </div>
-                            <p className="text-center mt-2 text-sm sm:text-md">{category.name}</p>
+                            <p className="text-center mt-2 text-sm font-semibold md:text-md lg:text-lg">{category.name}</p>
                         </Link>
 
                     ))}
