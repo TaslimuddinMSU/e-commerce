@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { products } from "@/utils/Data";
 import { useParams } from 'next/navigation';
-import {FaShoppingCart, FaTruck } from 'react-icons/fa';
+import { FaShoppingCart, FaTruck } from 'react-icons/fa';
 import Title from "@/components/Title";
 import Products from "@/components/Products";
 import DeliveryOptions from "@/components/DeliveryOptions";
@@ -13,7 +13,7 @@ import DeliveryOptions from "@/components/DeliveryOptions";
 const ProductPage = () => {
   const params = useParams();
   const { productDetails } = params;
-  const id = Number(productDetails); 
+  const id = Number(productDetails);
 
   const [prodDetails, setProdDetails] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
@@ -23,9 +23,9 @@ const ProductPage = () => {
     const item = products.find((ele) => ele.id === id);
     if (item) {
       setProdDetails(item);
-      setSelectedImage(item.image); 
+      setSelectedImage(item.image);
     }
-  }, [id]); 
+  }, [id]);
 
   return (
     <>
@@ -65,12 +65,21 @@ const ProductPage = () => {
               </p>
 
               {/* Buttons */}
-              <div className="mt-6 flex gap-4">
-                <button className="text-sm bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600">
-                  Buy Now
+              <div className="mt-6 flex gap-4 flex-wrap">
+                <div className="flex items-center justify-center gap-2 sm:gap-3">
+                  <button className="flex gap-2 items-center justify-center border px-4 sm:px-4 sm:py-2 rounded-md hover:bg-gray-100">
+                    <span className="font-semibold text-lg">-</span>
+                  </button>
+                  <span className="text-gray-600 text-base">1</span>
+                  <button className="flex gap-2 items-center justify-center border px-4 sm:px-4 sm:py-2 rounded-md hover:bg-gray-100">
+                    <span className="font-semibold text-lg">+</span>
+                  </button>
+                </div>
+                <button className="flex gap-2 items-center justify-center border px-5 py-2 rounded-md hover:bg-gray-100">
+                  <span><FaShoppingCart /></span><span className="text-sm">Add to Cart</span>
                 </button>
-                <button className="flex gap-2 items-center justify-center border px-6 py-3 rounded-md hover:bg-gray-100">
-                  <span><FaShoppingCart/></span><span className="text-sm">Add to Cart</span>
+                <button className="w-full sm:w-[auto] text-sm bg-orange-500 text-white px-5 py-2 rounded-md hover:bg-orange-600">
+                  Buy Now
                 </button>
               </div>
               <div className="w-full">
@@ -84,7 +93,7 @@ const ProductPage = () => {
       </div>
       <div className="w-full p-4">
         <Title title={"Similar Products"} />
-        <Products products={products}/>
+        <Products products={products} />
       </div>
       <div className="w-full py-2">
         <Footer />
