@@ -81,7 +81,7 @@ const Category = () => {
                                     height={50}
                                 />
                             </div>
-                            <p className="text-center mt-2 mediam-text">{category.name}</p>
+                            <p className="text-center mt-2 medium-text">{category.name}</p>
                         </Link>
 
                     ))}

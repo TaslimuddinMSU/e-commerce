@@ -28,9 +28,9 @@ const BlogDetails = async ({ params }) => {
                         <Image
                             src="/blog-img.webp"
                             alt={formattedTitle}
-                            width={600} 
-                            height={200} 
-                            className="w-full h-auto object-cover rounded-lg" 
+                            width={600}
+                            height={200}
+                            className="w-full h-auto object-cover rounded-lg"
                         />
                     </div>
 
@@ -78,6 +78,25 @@ const BlogDetails = async ({ params }) => {
                     <h5 className=' text-gray-900 text-xl py-4 font-bold'>Related Posts:</h5>
                     <div className='w-full py-4'>
                         <RelatedBlog blog={relatedBlog} />
+                    </div>
+
+                    <div className='w-full py-4'>
+                        <h5 className=' text-gray-900 text-xl py-4 font-bold'>Total Comments:</h5>
+                        <div className='flex justify-center items-center md:justify-start md:items-start gap-6 my-3 border-t-2 border-b-2 border-solid py-4 md:flex-row flex-col' >
+                            <div className="w-20 md:w-30 h-20 rounded-full overflow-hidden">
+                                <Image
+                                    src="/user-img.webp"
+                                    alt={formattedTitle}
+                                    width={200}
+                                    height={200}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className='flex justify-center items-center md:justify-start md:items-start flex-col'>
+                                <h3 className='text-gray-700 text-md  font-bold text-center md:text-start'>Anna</h3>
+                                <p className='small-text pt-3'>The names "John Doe" is used as placeholder names for a party whose true identity is unknown or must be withheld in a legal action, case, or discussion. The names are also used to refer to a corpse.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div className='w-full'>

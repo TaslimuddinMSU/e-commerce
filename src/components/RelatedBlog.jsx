@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const RelatedBlog = ({blog}) => {
   return (
-    <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 ">
+    <div className="w-full grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
 
     {blog.map((post, index) => (
         <Link
