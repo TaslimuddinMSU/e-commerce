@@ -37,7 +37,7 @@ export default function Footer() {
                             <Link href="#"><li>About us</li></Link>
                             <Link href="#"><li>Conditions</li></Link>
                             <Link href="#"><li>Our Journals</li></Link>
-                            <Link href="#"><li>Careers</li></Link>
+                            {/* <Link href="#"><li>Careers</li></Link> */}
                         </ul>
                     </div>
 
@@ -46,9 +46,9 @@ export default function Footer() {
                         <ul className="mt-3 space-y-2 text-gray-600 leading-7">
                             <Link href="#"><li>FAQ</li></Link>
                             <Link href="#"><li>Contact</li></Link>
+                            <Link href="/blog"><li>Blogs</li></Link>
                             <Link href="#"><li>Privacy Policy</li></Link>
                             <Link href="#"><li>Returns & Refunds</li></Link>
-                            <Link href="#"><li>Cookie Guidelines</li></Link>
                             <Link href="#"><li>Delivery Information</li></Link>
                         </ul>
                     </div>

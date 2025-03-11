@@ -3,28 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import {categories} from "@/utils/categories";
 import Title from './Title';
-
-const categories = [
-    { name: 'Fruits & Veges', image: '/org-banner-4.jpg' },
-    { name: 'Breads & Sweets', image: '/org-banner-4.jpg' },
-    { name: 'Fruits & Veges', image: '/org-banner-4.jpg' },
-    { name: 'Beverages', image: '/org-banner-4.jpg' },
-    { name: 'Meat Products', image: '/org-banner-4.jpg' },
-    { name: 'Breads', image: '/org-banner-4.jpg' },
-    { name: 'Fruits & Veges', image: '/org-banner-4.jpg' },
-    { name: 'Breads & Sweets', image: '/org-banner-4.jpg' },
-    { name: 'Beverages', image: '/org-banner-4.jpg' },
-    { name: 'Meat Products', image: '/org-banner-4.jpg' },
-    { name: 'Breads', image: '/org-banner-4.jpg' },
-    { name: 'Fruits & Veges', image: '/org-banner-4.jpg' },
-    { name: 'Breads & Sweets', image: '/org-banner-4.jpg' },
-    { name: 'Beverages', image: '/org-banner-4.jpg' },
-    { name: 'Meat Products', image: '/org-banner-4.jpg' },
-    { name: 'Breads', image: '/org-banner-4.jpg' },
-    { name: 'Fruits & Veges', image: '/org-banner-4.jpg' },
-    { name: 'Breads & Sweets', image: '/org-banner-4.jpg' },
-];
 
 const Category = () => {
     const scrollRef = useRef(null);
@@ -87,7 +67,7 @@ const Category = () => {
             <div className="relative flex items-center justify-center">
                 <div
                     ref={scrollRef}
-                    className="flex space-x-7 overflow-x-auto p-2 hide_scrollbar"
+                    className="flex space-x-7 overflow-x-auto py-2 hide_scrollbar"
                 >
                     {categories.map((category, index) => (
                         <Link href='/category' key={index} className="flex flex-col items-center">
@@ -101,7 +81,7 @@ const Category = () => {
                                     height={50}
                                 />
                             </div>
-                            <p className="text-center mt-2 text-sm font-semibold md:text-md lg:text-lg">{category.name}</p>
+                            <p className="text-center mt-2 mediam-text">{category.name}</p>
                         </Link>
 
                     ))}

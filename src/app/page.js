@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import OfferSecetion from "@/components/OfferSecetion";
 import Image from "next/image";
 import FeaturedProducts from '@/components/FeaturedProducts'
+import Blog from "@/components/Blog";
 
 const Home = () => {
   return (
@@ -56,6 +57,11 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Blog Section */}
+      <div className="w-full">
+        <Blog />
       </div>
       <Footer />
     </div>

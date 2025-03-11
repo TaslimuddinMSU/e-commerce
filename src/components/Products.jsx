@@ -68,10 +68,10 @@ const Products = ({ products }) => {
                                 <button onClick={() => handleAddItems(product.id)}
                                     className="w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-md text-sm">
                                     {/* <span className="text-center"><FaShoppingCart/></span>  */}
-                                    <span className="text-sm text-white">Add to Cart</span>
+                                    <span className="small-text text-white">Add to Cart</span>
                                 </button>
                                 <Link href={`/${product.id}`} className="w-full flex items-center justify-center bg-yellow-500 hover:bg-black text-white p-2 rounded-md text-sm">
-                                    <span className="text-sm text-white">View Detail</span>
+                                    <span className="small-text text-white">View Detail</span>
                                 </Link>
                             </div>
                         </div>
