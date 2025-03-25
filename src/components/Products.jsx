@@ -70,7 +70,7 @@ const Products = ({ products }) => {
                                     {/* <span className="text-center"><FaShoppingCart/></span>  */}
                                     <span className="small-text text-white">Add to Cart</span>
                                 </button>
-                                <Link href={`/${product.id}`} className="w-full flex items-center justify-center bg-yellow-500 hover:bg-black text-white p-2 rounded-md text-sm">
+                                <Link href={`/products/${product.id}`} className="w-full flex items-center justify-center bg-yellow-500 hover:bg-black text-white p-2 rounded-md text-sm">
                                     <span className="small-text text-white">View Detail</span>
                                 </Link>
                             </div>

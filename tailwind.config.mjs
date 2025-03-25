@@ -13,7 +13,9 @@ export default {
       },
       backgroundImage: {
         bannerImg: "url('/org-food.webp')",
-        newsLatterBanner: "url('/banner-newsletter.jpg')"
+        newsLatterBanner: "url('/banner-newsletter.jpg')",
+        registerBG: "url('/register-img.webp')",
+        userSignUp: "url('/user-profile-icon.jpg')"
       },
     },
   },

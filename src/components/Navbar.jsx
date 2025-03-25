@@ -1,10 +1,11 @@
 'use client';
 import { useState } from 'react';
-import { Menu, X, Search,  Bookmark, ShoppingCart } from 'lucide-react';
+import { Menu, X, Search, Bookmark, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import NavLogo from "@/assets/icons/food-icon.png";
 import Link from 'next/link';
-import {FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import UserImag from "@/assets/logos/user-profile-icon.jpg";
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -14,9 +15,9 @@ const Navbar = () => {
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden">
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
-                <Link href= "/" className="text-2xl font-bold flex items-center gap-2">
+                <Link href="/" className="text-2xl font-bold flex items-center gap-2">
                     <Image src={NavLogo} alt="Logo" width={50} height={50} />
-                    <span className="text-green-500">Organic Foods</span>
+                    <span className="text-green-500 md:block hidden">Organic Foods</span>
                 </Link>
             </div>
             <div className='hidden gap-4 sm:flex'>
@@ -39,11 +40,14 @@ const Navbar = () => {
 
             {/* Icons */}
             <div className="flex items-center gap-3 sm:gap-4">
-                <Link href="" className='hover:rounded-[8px] hover:px-3 py-2 hover:border-gray-500 flex gap-2 justify-center items-center border border-transparent'>
-                <FaUser size={25} />Taslim
+                <Link href="/sign-up" className='hover:rounded-[6px]  hover:px-2 hover:py-1 py-2 hover:border-gray-500 flex gap-2 justify-center items-center border border-transparent'>
+                    <div className='flex justify-center items-center gap-1'>
+                        <Image src={UserImag} alt='user-img' width={30} height="full" />
+                        <span className="text-sm font-semibold">Sign Up</span>
+                    </div>
                 </Link>
                 <Link href=""><Bookmark size={25} /></Link>
-                <Link href=""><FaShoppingCart size={25} className='text-yellow'/></Link>
+                <Link href="/viewcart"><FaShoppingCart size={25} className='text-yellow' /></Link>
             </div>
 
             {/* Mobile Sidebar */}
@@ -61,16 +65,16 @@ const Navbar = () => {
                     >
                         <div className='p-4 w-full flex items-center justify-between gap-6'>
                             <span>MENU</span>
-                        <button onClick={() => setIsMenuOpen(false)} className=" flex justify-end">
-                            <X size={24} />
-                        </button>
+                            <button onClick={() => setIsMenuOpen(false)} className=" flex justify-end">
+                                <X size={24} />
+                            </button>
                         </div>
                         <ul className="px-4 space-y-4 overflow-y-auto h-full">
-                            {['Fruits and Vegetables', 'Dairy and Eggs','Fruits and Vegetables', 'Dairy and Eggs',
-                             'Meat and Poultry', 'Seafood', 'Bakery and Bread', 'Canned Goods', 'Frozen Foods', 
-                             'Pasta and Rice', 'Breakfast Foods', 'Snacks and Chips'].map((item, index) => (
-                                <li key={index} className="py-2 border-b border-b-black text-gray-700 hover:text-green-500 cursor-pointer">{item}</li>
-                            ))}
+                            {['Fruits and Vegetables', 'Dairy and Eggs', 'Fruits and Vegetables', 'Dairy and Eggs',
+                                'Meat and Poultry', 'Seafood', 'Bakery and Bread', 'Canned Goods', 'Frozen Foods',
+                                'Pasta and Rice', 'Breakfast Foods', 'Snacks and Chips'].map((item, index) => (
+                                    <li key={index} className="py-2 border-b border-b-black text-gray-700 hover:text-green-500 cursor-pointer">{item}</li>
+                                ))}
                         </ul>
                     </div>
                 </div>

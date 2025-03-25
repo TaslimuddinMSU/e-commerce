@@ -32,7 +32,7 @@ const ProductPage = () => {
       <div className="w-full">
         <Navbar />
       </div>
-      <div className="w-full mx-auto p-4 md:p-8">
+      <div className="w-full mx-auto p-4 md:p-10">
         {prodDetails ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Product Image Section */}

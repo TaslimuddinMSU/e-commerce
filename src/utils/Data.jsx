@@ -99,3 +99,26 @@ export const products = [
         "discount": "10% OFF"
     }
 ];
+
+export const cartItem = [
+    {
+        "id": 1,
+        "name": "Fresh Salmon",
+        "description": "High-quality fresh salmon, rich in omega-3 fatty acids, perfect for a healthy diet. Ideal for grilling, baking, or making sushi at home.",
+        "image": "/product-thumb-6.png",
+        "originalPrice": 24.0,
+        "discountedPrice": 18.0,
+        "seller": "PumaSportsIndia", 
+        "discount": "10% OFF"
+    },
+    {
+        "id": 2,
+        "name": "Imported Italian Spaghetti Pasta",
+        "description": "Authentic Italian spaghetti pasta made from premium durum wheat. Perfect for classic pasta dishes, rich in fiber, and great for a Mediterranean diet.",
+        "image": "/product-thumb-5.png",
+        "originalPrice": 24.0,
+        "discountedPrice": 18.0,
+        "seller": "PumaSportsIndia", 
+        "discount": "10% OFF"
+    },
+]
