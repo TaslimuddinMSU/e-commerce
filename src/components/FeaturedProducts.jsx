@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
             <div className="flex justify-between items-center mb-4">
                 <Title title='Featured products' />
                 <div className='flex justify-center items-center flex-end gap-2'>
-                    <button className="bg-green-500 text-white px-4 py-2 rounded-lg">View More</button>
+                    <button className="hidden sm:block md:block bg-green-500 text-white px-4 py-2 rounded-lg">View More</button>
                     <button
                         onClick={scrollLeft}
                         className={`hover:bg-green-500 bg-gray-200 p-2 rounded-[10px] shadow-md ${isAtStart ? 'opacity-50 cursor-not-allowed' : ''}`}

@@ -28,7 +28,7 @@ const Home = () => {
         <FeaturedProducts />
       </div>
       <div className="w-full py-4 sm:py-8 px-0 sm:px-5">
-        <div className="w-full bg-newsLatterBanner h-[300px] flex items-center justify-center">
+        <div className="w-full bg-newsLatterBanner bg-no-repeat bg-cover h-auto sm:h-[300px] flex items-center justify-center">
           <div className="container flex flex-col sm:flex-row gap-7 items-center justify-between px-4 sm:px-10">
             <div className="w-full sm:w-[50%] flex items-start justify-start flex-col">
               <p className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl text-white">Get 25% Discount on your first purchase</p>
