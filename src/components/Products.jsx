@@ -15,7 +15,7 @@ const Products = ({ products }) => {
             setAllItemsToCart((prevItems) => [...prevItems, item]);
         }
     }
-    console.log("handleAddItems", allItemsToCart)
+    // console.log("handleAddItems", allItemsToCart)
     const handleRemoveItems = (id) => {
         console.log("handleRemoveItems", id)
     }

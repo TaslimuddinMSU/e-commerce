@@ -1,19 +1,19 @@
 "use client"
-import DashboardCard from "@/adminComponent/DashboardCard";
 import Navbar from "@/adminComponent/Navbar";
 import Sidebar from "@/adminComponent/Sidebar";
-import React, { useEffect } from "react";
-import { FaDollarSign, FaShoppingCart, FaUsers } from "react-icons/fa";
-import { MdOutlineWeb } from "react-icons/md";
+import React, { useEffect, useState } from "react";
+import CategoryModal from './Form/CategoryModal';
 
 const Page = () => {
   useEffect(() => {
     // Safe to access `window` or browser-only stuff here
   }, []);
 
-  const handleOpenModal = () => {
 
-  }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   return (
     <div className="w-full flex flex-col relative bg-[#6c757d12] min-h-screen">
@@ -33,6 +33,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CategoryModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

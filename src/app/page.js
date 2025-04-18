@@ -29,12 +29,12 @@ const Home = () => {
       </div>
       <div className="w-full py-4 sm:py-8 px-0 sm:px-5">
         <div className="w-full bg-newsLatterBanner bg-no-repeat bg-cover h-auto sm:h-[300px] flex items-center justify-center">
-          <div className="container flex flex-col sm:flex-row gap-7 items-center justify-between px-4 sm:px-10">
+          <div className="container flex flex-col sm:flex-row gap-7 items-center justify-between px-4 sm:px-10 py-4">
             <div className="w-full sm:w-[50%] flex items-start justify-start flex-col">
               <p className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl text-white">Get 25% Discount on your first purchase</p>
               <p className="text-md text-white mt-2">Just Sign Up & Register it now to become member.</p>
             </div>
-            <div className="w-full sm:w-[40%] flex items-center justify-center flex-col">
+            <div className="w-full sm:w-[40%] flex items-center justify-center flex-col gap-4">
               <div className="mt-3 flex w-full">
                 <input
                   type="name"

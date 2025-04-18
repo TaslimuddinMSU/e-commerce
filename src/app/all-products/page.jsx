@@ -2,18 +2,22 @@
 import DashboardCard from "@/adminComponent/DashboardCard";
 import Navbar from "@/adminComponent/Navbar";
 import Sidebar from "@/adminComponent/Sidebar";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaDollarSign, FaShoppingCart, FaUsers } from "react-icons/fa";
 import { MdOutlineWeb } from "react-icons/md";
+import ProductModal from "./Form/ProductModal";
+import Table from "./Table";
 
 const Page = () => {
   useEffect(() => {
     // Safe to access `window` or browser-only stuff here
   }, []);
 
-  const handleOpenModal = () => {
 
-  }
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
 
   return (
     <div className="w-full flex flex-col relative bg-[#6c757d12] min-h-screen">
@@ -31,8 +35,13 @@ const Page = () => {
               <span className="text-xl">+</span><span className="ml-1">Add Product</span>
             </button>
           </div>
+
+          <div className="w-[90%] my-4 sm:my-8">
+            <Table />
+          </div>
         </div>
       </div>
+      <ProductModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

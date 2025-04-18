@@ -12,20 +12,32 @@ import DeliveryOptions from "@/components/DeliveryOptions";
 
 const ProductPage = () => {
   const params = useParams();
-  const { productDetails } = params;
+  // const { productDetails } = params;
+  const productDetails = params.productDetails;
   const id = Number(productDetails);
 
   const [prodDetails, setProdDetails] = useState(null);
   const [selectedImage, setSelectedImage] = useState("");
   const [pincode, setPincode] = useState("");
 
+  const [totalQuantity, setTotalQuantity] = useState(1)
+
   useEffect(() => {
     const item = products.find((ele) => ele.id === id);
     if (item) {
       setProdDetails(item);
       setSelectedImage(item.image);
+      setTotalQuantity(1);
     }
   }, [id]);
+
+  const handleIncreaseQuantity = () => {
+    setTotalQuantity((prev) => prev + 1);
+  }
+
+  const handleDecreaseQuantity = () => {
+    setTotalQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  }
 
   return (
     <>
@@ -42,7 +54,7 @@ const ProductPage = () => {
                   src={selectedImage}
                   alt={prodDetails.name}
                   width={600}
-                  height={200}
+                  height={100}
                   className="rounded-md"
                 />
               </div>
@@ -58,7 +70,7 @@ const ProductPage = () => {
                 </span>
               </div>
               <p className="text-xl font-bold mt-2 text-gray-900">
-                ₹{prodDetails.discountedPrice}{" "}
+                ₹{(prodDetails?.discountedPrice * totalQuantity).toFixed(2)}{" "}
                 <span className="text-gray-500 line-through">
                   ₹{prodDetails.originalPrice}
                 </span>
@@ -67,11 +79,15 @@ const ProductPage = () => {
               {/* Buttons */}
               <div className="mt-6 flex gap-4 flex-wrap">
                 <div className="flex items-center justify-center gap-2 sm:gap-3">
-                  <button className="flex gap-2 items-center justify-center border px-4 sm:px-4 sm:py-2 rounded-md hover:bg-gray-100">
+                  <button className="flex gap-2 items-center justify-center border px-4 sm:px-4 sm:py-2 rounded-md hover:bg-gray-100"
+                    onClick={handleDecreaseQuantity}
+                  >
                     <span className="font-semibold text-lg">-</span>
                   </button>
-                  <span className="text-gray-600 text-base">1</span>
-                  <button className="flex gap-2 items-center justify-center border px-4 sm:px-4 sm:py-2 rounded-md hover:bg-gray-100">
+                  <span className="text-gray-600 text-base">{totalQuantity}</span>
+                  <button className="flex gap-2 items-center justify-center border px-4 sm:px-4 sm:py-2 rounded-md hover:bg-gray-100"
+                    onClick={handleIncreaseQuantity}
+                  >
                     <span className="font-semibold text-lg">+</span>
                   </button>
                 </div>
