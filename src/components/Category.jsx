@@ -70,7 +70,7 @@ const Category = () => {
                     className="flex space-x-7 overflow-x-auto py-2 hide_scrollbar"
                 >
                     {categories.map((category, index) => (
-                        <Link href='/category' key={index} className="flex flex-col items-center">
+                        <Link href={`/category`} key={index} className="flex flex-col items-center">
                             <div className="flex items-center justify-center w-[100px] h-[100px] 
                             sm:w-[150px] sm:h-[150px] bg-gray-300 rounded-full overflow-hidden">
                                 <Image

@@ -9,7 +9,7 @@ const Blog = () => {
         <div className="px-3 sm:px-6 py-2 sm:py-8">
             <div className="flex justify-between items-center gap-3 w-full">
                 <Title title={"Our Recent Blog"} />
-                <Link href="/blog" className="bg-yellow-500 text-white px-4 py-2 rounded-lg">
+                <Link href="/blog" className="bg-yellow-500 text-white px-4 py-2 rounded-lg hidden sm:block">
                     View More
                 </Link>
             </div>

@@ -4,12 +4,12 @@ import { CalendarDays, Tag } from "lucide-react";
 
 const BlogCard = ({blog}) => {
     return (
-        <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+        <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-6">
 
             {blog.map((post, index) => (
                 <Link
                     href={`/blog/${post.slug}`}
-                    className="flex justify-center items-center cursor-pointer h-full mt-2">
+                    className="flex justify-center items-center cursor-pointer h-full ">
 
                     <div key={index} className="max-w-lg bg-white rounded-xl shadow-lg overflow-hidden">
 

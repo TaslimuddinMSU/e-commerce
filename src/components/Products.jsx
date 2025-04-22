@@ -26,7 +26,8 @@ const Products = ({ products }) => {
                 {products.map((product) => (
                     <div
                         key={product.id}
-                        className="relative group border rounded-lg shadow-lg w-64 flex-shrink-0 scroll-snap-center cursor-pointer transition-transform duration-300 group-hover:scale-110"
+                        className="relative group border rounded-lg shadow-lg w-64 flex-shrink-0 scroll-snap-center 
+                        cursor-pointer transition-transform duration-300 group-hover:scale-110"
                     >
                         <div className="flex items-center justify-center w-full h-auto p-4">
                             <Image

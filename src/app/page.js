@@ -60,7 +60,7 @@ const Home = () => {
       </div>
 
       {/* Blog Section */}
-      <div className="w-full">
+      <div className="w-full mb-4">
         <Blog />
       </div>
       <Footer />

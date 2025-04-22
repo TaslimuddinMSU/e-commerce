@@ -8,7 +8,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Meat Products"
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Breads & Sweets"
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Fruits & Veges"
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Beverages"
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Beverages"
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Breads & Sweets"
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Breads"
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
+        "discount": "10% OFF",
+        "category": "Breads & Sweets"
     },
     {
         "id": 9,
@@ -96,9 +104,23 @@ export const products = [
         "reviews": 222,
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "discount": "10% OFF"
-    }
+        "discount": "10% OFF",
+        "category": "Beverages"
+    },
+    {
+        "id": 10,
+        "name": "Almond Butter - Unsweetened",
+        "description": "Delicious, smooth, and unsweetened almond butter, high in protein and healthy fats. Perfect for spreading on toast, adding to smoothies, or baking.",
+        "image": "/product-thumb-7.png",
+        "rating": 5,
+        "reviews": 222,
+        "originalPrice": 24.0,
+        "discountedPrice": 18.0,
+        "discount": "10% OFF",
+        "category": "Breads & Sweets"
+    },
 ];
+
 
 export const cartItem = [
     {
@@ -108,8 +130,9 @@ export const cartItem = [
         "image": "/product-thumb-6.png",
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "seller": "PumaSportsIndia", 
-        "discount": "10% OFF"
+        "seller": "PumaSportsIndia",
+        "discount": "10% OFF",
+        "category": "Meat Products"
     },
     {
         "id": 2,
@@ -118,7 +141,9 @@ export const cartItem = [
         "image": "/product-thumb-5.png",
         "originalPrice": 24.0,
         "discountedPrice": 18.0,
-        "seller": "PumaSportsIndia", 
-        "discount": "10% OFF"
-    },
-]
+        "seller": "PumaSportsIndia",
+        "discount": "10% OFF",
+        "category": "Breads & Sweets"
+    }
+];
+

@@ -20,32 +20,32 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li className='flex'>
-                    <Link href="/categories" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
+                    <Link href="/dashboard/categories" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
                     <FaListAlt/> <span>Categories</span>
                     </Link>
                 </li>
                 <li className='flex'>
-                    <Link href="/all-products" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
+                    <Link href="/dashboard/all-products" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
                        <FaShoppingCart/> <span>Products</span>
                     </Link>
                 </li>
                 <li className='flex'>
-                    <Link href="/all-blogs" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
+                    <Link href="/dashboard/all-blogs" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
                        <FaBlog/> <span>Blogs</span>
                     </Link>
                 </li >
                 <li className='flex'>
-                    <Link href="/offers" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
+                    <Link href="/dashboard/offers" className="flex items-center gap-4 hover:text-red-300 transition-colors cursor-pointer">
                        <FaTags/> <span>Offers</span>
                     </Link>
                 </li>
                 <li className='flex hover:text-red-300'>
-                    <Link href="/users" className="flex items-center gap-4 transition-colors cursor-pointer">
+                    <Link href="/dashboard/users" className="flex items-center gap-4 transition-colors cursor-pointer">
                        <FaUsers /> <span>Users</span>
                     </Link>
                 </li>
                 <li className='flex hover:text-red-300'>
-                    <Link href="/comments" className="flex items-center gap-4 transition-colors cursor-pointer">
+                    <Link href="/dashboard/comments" className="flex items-center gap-4 transition-colors cursor-pointer">
                        <FaCommentDots/> <span>Comments</span>
                     </Link>
                 </li>
